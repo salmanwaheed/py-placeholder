@@ -1,0 +1,6 @@
+.DS_Store
+*.zip
+cgi-bin
+env
+*.pyc
+instance/

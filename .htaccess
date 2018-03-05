@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /home1/salmanwa/public_html/imgx/run.cgi/$1 [L]
