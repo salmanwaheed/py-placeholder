@@ -1,6 +1,4 @@
 .DS_Store
-*.zip
-cgi-bin
-env
+.env
 *.pyc
-instance/
+__pycache__

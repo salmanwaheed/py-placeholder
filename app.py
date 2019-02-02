@@ -1,46 +1,45 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# https://github.com/salmanwaheed/
+# https://linkedin.com/in/salmanwaheedahmed/
+# https://rubygems.org/profiles/salmanwaheed/
+
+# view jekyll theme demo
+# https://salmanwaheed.github.io/plan-b/
+
+# Copyright (c) 2018 Salman Waheed
+
 import os
 import sys
-sys.path.insert(0, os.path.expanduser('~/public_html/imgx/env/lib/python2.7/site-packages/'))
+import json
 
-from flask import Flask, render_template, request
-from imgx.lib import DrawAnImage
+from flask import Flask,render_template, request
+from placeholder.lib import drawAnImage
 
 app = Flask(__name__)
 
-@app.errorhandler(500)
-def not_found(error):
-    return '500', 500
-
 @app.errorhandler(404)
-def not_found(error):
-    return '404', 404
+def page_not_found(error):
+    return json.dumps({"Error": "Page not found"}), 404
 
-@app.route('/docs', methods=['GET'])
-def docs():
-    return "Hello World"
-
-# def http_error_handler(error):
-#     return 'he', error.code
-
-# for error in (401, 404, 500): # or with other http code you consider as error
-#     app.error_handler_spec[None][error] = http_error_handler
+@app.errorhandler(500)
+def interval_server_err(error):
+    return json.dumps({"Error": "Interval Server Error"}), 500
 
 @app.route('/', methods=['GET'])
 def index():
-    width         = request.args.get('width', default = None, type = int)
-    height        = request.args.get('height', default = None, type = int)
-    bgcolor       = request.args.get('bgcolor', default = None, type = str)
-    txt           = request.args.get('txt', default = None, type = str)
-    txtcolor      = request.args.get('txtcolor', default = None, type = str)
-    txtsize       = request.args.get('txtsize', default = 18, type = int)
-    txtalign      = request.args.get('txtalign', default = None, type = str)
+    width = request.args.get('width',default=300,type=int)
+    height = request.args.get('height',default=200,type=int)
+    bgcolor = request.args.get('bgcolor',default='darkgrey',type=str)
+    text = request.args.get('text',default='300x200',type=str)
+    textcolor = request.args.get('textcolor',default='black',type=str)
+    textsize = request.args.get('textsize',default=20,type=int)
+    textalign = request.args.get('textalign',default='center',type=str)
 
-    # instance of class/object
-    draw = DrawAnImage.DrawAnImage(width = width, height = height, bgcolor = bgcolor,
-                                txt = txt, txtsize = txtsize, txtcolor = txtcolor,
-                                txtalign = txtalign
-                             )
+    draw = drawAnImage.drawAnImage(width=width,height=height,bgcolor=bgcolor,
+                                text=text,textsize=textsize,textcolor=textcolor,
+                                textalign=textalign)
 
     return draw.make_an_image()
 

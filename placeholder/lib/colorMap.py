@@ -1,4 +1,16 @@
-colormap = {
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# https://github.com/salmanwaheed/
+# https://linkedin.com/in/salmanwaheedahmed/
+# https://rubygems.org/profiles/salmanwaheed/
+
+# view jekyll theme demo
+# https://salmanwaheed.github.io/plan-b/
+
+# Copyright (c) 2018 Salman Waheed
+
+colorMap = {
     "aliceblue": "#f0f8ff",
     "antiquewhite": "#faebd7",
     "aqua": "#00ffff",
@@ -24,8 +36,8 @@ colormap = {
     "darkcyan": "#008b8b",
     "darkgoldenrod": "#b8860b",
     "darkgray": "#a9a9a9",
-    "darkgrey": "#a9a9a9",
     "darkgreen": "#006400",
+    "darkgrey": "#a9a9a9",
     "darkkhaki": "#bdb76b",
     "darkmagenta": "#8b008b",
     "darkolivegreen": "#556b2f",
@@ -53,9 +65,9 @@ colormap = {
     "gold": "#ffd700",
     "goldenrod": "#daa520",
     "gray": "#808080",
-    "grey": "#808080",
     "green": "#008000",
     "greenyellow": "#adff2f",
+    "grey": "#808080",
     "honeydew": "#f0fff0",
     "hotpink": "#ff69b4",
     "indianred": "#cd5c5c",
@@ -70,8 +82,8 @@ colormap = {
     "lightcoral": "#f08080",
     "lightcyan": "#e0ffff",
     "lightgoldenrodyellow": "#fafad2",
-    "lightgreen": "#90ee90",
     "lightgray": "#d3d3d3",
+    "lightgreen": "#90ee90",
     "lightgrey": "#d3d3d3",
     "lightpink": "#ffb6c1",
     "lightsalmon": "#ffa07a",
