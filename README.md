@@ -2,6 +2,8 @@
 
 Generate dynamic multi color box or dummy images, just like "Lorem Ipsum" text :D
 
+<img src="https://raw.githubusercontent.com/salmanwaheed/python-placeholder/master/screenshot.png" width="400">
+
 ## Guidelines
 
 ```bash
