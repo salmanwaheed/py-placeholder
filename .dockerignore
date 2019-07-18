@@ -1,0 +1,7 @@
+.git
+*.pyc
+Dockerfile
+.DS_Store
+.gitignore
+*.md
+.env
