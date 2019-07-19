@@ -12,20 +12,19 @@
 
 import os
 import sys
-import json
 
-from flask import Flask,render_template, request
+from flask import Flask, render_template, request, jsonify
 from placeholder.lib import drawAnImage
 
 app = Flask(__name__)
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return json.dumps({"Error": "Page not found"}), 404
+    return jsonify({"Error": "Page not found"}), 404
 
 @app.errorhandler(500)
 def interval_server_err(error):
-    return json.dumps({"Error": "Interval Server Error"}), 500
+    return jsonify({"Error": "Interval Server Error"}), 500
 
 @app.route('/', methods=['GET'])
 def index():

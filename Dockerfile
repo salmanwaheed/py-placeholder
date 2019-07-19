@@ -1,8 +1,8 @@
 FROM python:3.6.5-slim
 
-COPY . /app
+COPY . /src
 
-WORKDIR /app
+WORKDIR /src
 
 RUN pip3 install -r requirements.txt
 
