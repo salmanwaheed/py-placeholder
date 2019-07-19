@@ -1,5 +1,7 @@
 FROM python:3.6.5-slim
 
+MAINTAINER Salman Waheed "mkdirenv@gmail.com"
+
 COPY . /src
 
 WORKDIR /src
